@@ -10,6 +10,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
+  
   email: string = '';
   password: string = '';
   error: string = '';

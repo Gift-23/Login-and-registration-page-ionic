@@ -1,11 +1,3 @@
-/**
-* Ionic 4 Firebase Email Auth
-*
-* Copyright © 2019-present Enappd. All rights reserved.
-*
-* This source code is licensed as per the terms found in the
-* LICENSE.md file in the root directory of this source tree.
-*/
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -16,13 +8,12 @@ import { LoadingController, ToastController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
   user: any;
   email: string = '';
   password: string = '';
   username: string = '';
-  image: number;
-  phone: number;
   error: string;
   userWantsToSignup: boolean = false;
   linkError: string = '';
@@ -42,7 +33,7 @@ export class HomePage {
     this.user.updateEmail(this.email)
       .then(() => {
         this.email = '';
-        this.presentToast('Email updated', false, 'bottom', 1000);
+        this.presentToast('Email updated', true, 'bottom', 1000);
         this.error = '';
       })
       .catch(err => {
@@ -58,24 +49,7 @@ export class HomePage {
       .then((data) => {
         console.log(data);
         this.username = '';
-        this.presentToast('Username updated', false, 'bottom', 1000);
-        this.error = '';
-      })
-      .catch(err => {
-        console.log(` failed ${err}`);
-        this.error = err.message;
-      });
-  }
-
-  updateImage() {
-
-    this.user.updateProfile({
-      photoURL: `https://picsum.photos/id/${this.image}/200/200`
-    })
-      .then((data) => {
-        console.log(data);
-        this.image = null;
-        this.presentToast('Image updated', false, 'bottom', 1000);
+        this.presentToast('Username updated', true, 'bottom', 1000);
         this.error = '';
       })
       .catch(err => {
@@ -88,7 +62,7 @@ export class HomePage {
     this.user.updatePassword(this.password)
       .then(() => {
         this.password = '';
-        this.presentToast('Password updated', false, 'bottom', 1000);
+        this.presentToast('Password updated', true, 'bottom', 1000);
         this.error = '';
       })
       .catch(err => {

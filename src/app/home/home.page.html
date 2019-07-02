@@ -1,20 +1,17 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar class="transition">
     <ion-title>
-      Anonymous Login
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    Welcome user
+    Welcome {{user.displayName}}!
     <p>Here are your profile details</p>
 
     <ion-item *ngIf="user">
-      <ion-thumbnail slot="start">
-        <img [src]="user.photoURL">
-      </ion-thumbnail>
       <ion-label text-wrap>
         <ion-text color="primary">
           <h3>{{user.displayName}}</h3>
@@ -31,13 +28,8 @@
     <ion-input type="string" placeholder="Enter new" [(ngModel)]="username"></ion-input>
     <ion-button slot="end" color="success" expand="full" (click)="updateUsername()">Update</ion-button>
   </ion-item>
-  <ion-item>
-    <ion-label position="fixed">Image</ion-label>
-    <ion-input type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
-    <ion-button slot="end" color="success" expand="full" (click)="updateImage()">Update</ion-button>
-  </ion-item>
   <ion-list-header color="medium">
-    Sensitive Updates
+    Contacts Updates
   </ion-list-header>
   <ion-item>
     <ion-label position="fixed">Email</ion-label>
@@ -55,21 +47,6 @@
     </ion-col>
   </ion-row>
 
-  <!-- 
-  <ion-row>
-    <ion-col>
-      <ion-button *ngIf="userWantsToSignup" expand="block" (click)="signup()" color="undefined" class="transition">
-        <strong class="white">
-          Sign Up</strong></ion-button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button *ngIf="!userWantsToSignup" expand="block" (click)="wantsToSignup()" color="undefined"
-        class="transition"><strong class="white">I want to
-          Sign Up</strong></ion-button>
-    </ion-col>
-  </ion-row> -->
   <ion-row>
     <ion-col>
       <ion-text class="error" text-center>{{linkError}}</ion-text>
