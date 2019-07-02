@@ -1,11 +1,3 @@
-/**
-* Ionic 4 Firebase Email Auth
-*
-* Copyright © 2019-present Enappd. All rights reserved.
-*
-* This source code is licensed as per the terms found in the
-* LICENSE.md file in the root directory of this source tree.
-*/
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { LoadingController, ToastController } from '@ionic/angular';

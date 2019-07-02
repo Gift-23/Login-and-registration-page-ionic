@@ -10,11 +10,12 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage {
+  
   email: string = '';
   password: string = '';
   error: string = '';
   username: string = '';
-  image: number;
+
   constructor(private fireauth: AngularFireAuth, private router: Router, private toastController: ToastController, private platform: Platform, public loadingController: LoadingController,
     public alertController: AlertController) {
 
@@ -51,7 +52,6 @@ export class SignupPage {
         console.log(user);
         user.updateProfile({
           displayName: this.username,
-          photoURL: `https://picsum.photos/id/${this.image}/200/200`
         })
           .then(() => {
             this.router.navigateByUrl('/home');
