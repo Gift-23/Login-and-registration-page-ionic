@@ -51,7 +51,7 @@ ion-card {
 }
 .img-logo {
   height: 150px;
-  width: 150px;
+  width: 240px;
 }
 .fire-logo {
   display: flex;
@@ -67,10 +67,10 @@ ion-card {
   display: block;
 }
 .transition {
-  background: linear-gradient(to right, #f57c00 14%, #ffca00 96%);
+  background: linear-gradient(to right, #f00c0c 14%, #d83e3e 96%);
 }
 .btn-color {
-  color: #ffa000;
+  color: red;
 }
 .error {
   color: red;

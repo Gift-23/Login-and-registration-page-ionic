@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
 @media screen and (min-width: 767px) {
   ion-card {
     width: 600px;
@@ -51,7 +52,7 @@ ion-card {
 }
 .img-logo {
   height: 150px;
-  width: 150px;
+  width: 240px;
 }
 .bold {
   font-weight: bold;
@@ -67,10 +68,10 @@ ion-card {
   padding-bottom: 30px;
 }
 .transition {
-  background: linear-gradient(to right, #f57c00 14%, #ffca00 96%);
+  background: linear-gradient(to right, #f00c0c 14%, #d83e3e 96%);
 }
 .btn-color {
-  color: #ffa000;
+  color: red;
 }
 .error {
   color: red;
